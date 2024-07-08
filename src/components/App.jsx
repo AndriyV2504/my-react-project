@@ -1,5 +1,6 @@
 import Product from "./Product/Product";
 import LoginForm from "./LoginForm/LoginForm";
+import SearchBar from "./SearchBar/SearchBar";
 
 const App = () => {
   const handleLogin = (userData) => {
@@ -7,6 +8,7 @@ const App = () => {
   };
   return (
     <>
+      <SearchBar />
       <h1>Please login to your account!</h1>
       <LoginForm onLogin={handleLogin} />
       {/* // =========================================  */}
