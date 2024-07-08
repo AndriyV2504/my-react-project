@@ -1,13 +1,21 @@
 import Product from "./Product/Product";
 import LoginForm from "./LoginForm/LoginForm";
 import SearchBar from "./SearchBar/SearchBar";
+import LangSwitcher from "./LangSwitcher/LangSwitcher";
+import { useState } from "react";
 
 const App = () => {
   const handleLogin = (userData) => {
     console.log(userData);
   };
+
+  const [lang, setLang] = useState("ua");
+
   return (
     <>
+      <p>Selected language: {lang}</p>
+      <LangSwitcher value={lang} onSelect={setLang} />
+      {/* ============================================= */}
       <SearchBar />
       <h1>Please login to your account!</h1>
       <LoginForm onLogin={handleLogin} />
